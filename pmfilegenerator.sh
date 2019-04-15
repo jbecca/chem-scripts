@@ -9,4 +9,5 @@ for i in $(ls *-freq.out)
     mkdir $framenum/runfiles
     mv $i $framenum
     mv mode**.run $framenum/runfiles
+    sed -i "s/tempval/$framenum/g" $framenum/runfiles/*.run
     done
